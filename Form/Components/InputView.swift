@@ -24,5 +24,5 @@ struct InputView: View {
 }
 
 #Preview {
-    InputView(text: "", title: "Nome", placeholder: "")
+    InputView(text: "", title: "Nome", placeholder: "Insira seu nome")
 }

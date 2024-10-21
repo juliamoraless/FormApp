@@ -16,11 +16,6 @@ struct DatePickerView: View {
         }
             .bold()
             .padding()
-            .tint(.brown)
-        Divider()
+            .environment(\.locale, Locale.init(identifier: "pt"))
     }
 }
-
-//#Preview {
-//    DatePickerView(date: )
-//}

@@ -17,19 +17,28 @@ struct FormView: View {
                 VStack(alignment: .leading) {
                     Text("Preencha os campos abaixo com atenção.")
                     Text("Informações e anexos errados podem invalidar sua inscrição.")
-                    Text("Os campos com * são de preenchimento obrigatório.")
                 }
                 .font(.footnote)
                 .fontWeight(.thin)
                 .foregroundStyle(Color(.darkGray))
-                VStack {
-                    InputView(text: "", title: "Nome completo:", placeholder: "")
+                VStack(alignment: .leading) {
+                    InputView(text: "", title: "Nome completo:", placeholder: "Insira seu nome")
                     InputView(text: "", title: "CPF:", placeholder: "000.000.000-00")
                     InputView(text: "", title: "Email:", placeholder: "exemplo@gmail.com")
                     DatePickerView(date: $date)
-                    InputView(text: "", title: "Anexo RG:", placeholder: "")
+                        .padding(.bottom, 10)
+                    HStack {
+                        Text("Anexo:")
+                            .bold()
+                        Text("(Nome do arquivo)")
+                        Spacer()
+                        UploadButton()
+                    }
+                    .padding()
                     Spacer()
                 }
+                ConfirmButton()
+                Spacer()
             }
             .navigationTitle("Inscreva-se ✨")
             .background(Color.white)
