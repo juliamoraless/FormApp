@@ -1,8 +1,8 @@
 //
-//  ConfirmButton.swift
+//  CofirmButton.swift
 //  Form
 //
-//  Created by Julia Morales on 21/10/24.
+//  Created by Julia Morales on 27/10/24.
 //
 
 import SwiftUI
@@ -24,6 +24,7 @@ struct ConfirmButton: View {
         }
     }
 }
+
 #Preview {
     ConfirmButton()
 }
